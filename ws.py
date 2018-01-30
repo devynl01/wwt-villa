@@ -1,14 +1,14 @@
 from flask import Flask
-from subprocess import pOpen
+from subprocess import Popen
 app = Flask(__name__)
 
 alerts = {"allClear": {"message": "All Clear"}, "fire": {"message": "Fire"}, "tornado": {"message": "Tornado"}, "intruder": {"message": "Intruder"}}
 
 
 def alert(alertName):
-    pOpen(["/usr/bin/python", "/home/pi/led.py", alertName])
+    Popen(["/usr/bin/python", "/home/pi/led.py", alertName])
     
-    pOpen(["/home/pi/slideshow.sh", alertName])
+    Popen(["/home/pi/slideshow.sh", alertName])
     return alerts[alertName]["message"]
 
 
