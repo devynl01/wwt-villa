@@ -2,7 +2,7 @@ from flask import Flask
 from subprocess import Popen
 app = Flask(__name__)
 
-alerts = {"allClear": {"message": "All Clear", "hex": "#ffffff"}, "fire": {"message": "Fire", "hex": "#E32A3C"}, "tornado": {"message": "Tornado", "hex": "#56E32A"}, "intruder": {"message": "Intruder", "hex": "#8682EE"}}
+alerts = {"allClear": {"message": "All Clear", "hex": "#ffffff"}, "fire": {"message": "Fire", "hex": "#E32A3C"}, "tornado": {"message": "Tornado", "hex": "#00ff00"}, "intruder": {"message": "Intruder", "hex": "#8682EE"}}
 Popen(["/opt/nodejs/bin/tplight", "on", "192.168.62.137"])
 
 def alert(alertName):
