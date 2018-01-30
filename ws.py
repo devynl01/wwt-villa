@@ -2,12 +2,12 @@ from flask import Flask
 from subprocess import Popen
 app = Flask(__name__)
 
-alerts = {"allClear": {"message": "All Clear"}, "fire": {"message": "Fire"}, "tornado": {"message": "Tornado"}, "intruder": {"message": "Intruder"}}
-
+alerts = {"allClear": {"message": "All Clear", "hex": "#ffffff"}, "fire": {"message": "Fire", "hex": "#E32A3C"}, "tornado": {"message": "Tornado", "hex": "#56E32A"}, "intruder": {"message": "Intruder", "hex": "#8682EE"}}
+Popen(["/opt/nodejs/bin/tplight", "on", "192.168.62.137"])
 
 def alert(alertName):
     Popen(["/usr/bin/python", "/home/pi/wwt-villa/led.py", alertName])
-    
+ 	Popen(["/opt/nodejs/bin/tplight", "hex", "192.168.62.137", alerts[alertName]["hex"]])   
     Popen(["/bin/bash", "/home/pi/wwt-villa/slideshow.sh", "/home/pi/wwt-villa/" + alertName])
     return alerts[alertName]["message"]
 
