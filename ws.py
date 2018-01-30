@@ -6,9 +6,9 @@ alerts = {"allClear": {"message": "All Clear"}, "fire": {"message": "Fire"}, "to
 
 
 def alert(alertName):
-    Popen(["/usr/bin/python", "/home/pi/led.py", alertName])
+    Popen(["/usr/bin/python", "/home/pi/wwt-villa/led.py", alertName])
     
-    Popen(["/home/pi/slideshow.sh", alertName])
+    Popen(["/home/pi/wwt-villa/slideshow.sh", alertName])
     return alerts[alertName]["message"]
 
 

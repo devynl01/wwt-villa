@@ -1,3 +1,4 @@
+from sys import argv
 import RPi.GPIO as GPIO ## Import GPIO library
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD) ## Use board pin numbering
