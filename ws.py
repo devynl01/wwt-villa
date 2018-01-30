@@ -7,7 +7,7 @@ Popen(["/opt/nodejs/bin/tplight", "on", "192.168.62.137"])
 
 def alert(alertName):
     Popen(["/usr/bin/python", "/home/pi/wwt-villa/led.py", alertName])
- 	Popen(["/opt/nodejs/bin/tplight", "hex", "192.168.62.137", alerts[alertName]["hex"]])   
+    Popen(["/opt/nodejs/bin/tplight", "hex", "192.168.62.137", alerts[alertName]["hex"]])   
     Popen(["/bin/bash", "/home/pi/wwt-villa/slideshow.sh", "/home/pi/wwt-villa/" + alertName])
     return alerts[alertName]["message"]
 
