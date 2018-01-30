@@ -1,0 +1,5 @@
+
+sudo cp wwt-villa.service  /lib/systemd/system/
+sudo chmod 755 /lib/systemd/system/wwt-villa.service
+sudo systemctl daemon-reload
+sudo systemctl enable wwt-villa.service
