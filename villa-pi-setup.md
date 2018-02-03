@@ -33,3 +33,4 @@ wget -O - https://raw.githubusercontent.com/sdesalas/node-pi-zero/master/install
 #install /opt/nodejs/bin/tplight command list: https://www.npmjs.com/package/tplink-lightbulb
 npm i -g tplink-lightbulb
 
+git clone https://github.com/devynl01/wwt-villa.git
