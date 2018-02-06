@@ -34,3 +34,6 @@ wget -O - https://raw.githubusercontent.com/sdesalas/node-pi-zero/master/install
 npm i -g tplink-lightbulb
 
 git clone https://github.com/devynl01/wwt-villa.git
+
+#sudo nano /boot/config.txt 
+display_rotate=2 
