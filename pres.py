@@ -10,7 +10,7 @@ def pix(folder): # creating function to run eeach command line name
 
 
 @app.route("/<folder>") # defining browser route
-def showpix(): # function "allClear" will run
+def showpix(folder): # function "allClear" will run
     return pix(folder) # running alert function and returns alert message for "allClear"
 
 
