@@ -1,0 +1,10 @@
+[Unit]
+Description=pres
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/pi/wwt-villa/pres.py & > /home/pi/myscript.log 2>&1
+
+[Install]
+WantedBy=multi-user.target
